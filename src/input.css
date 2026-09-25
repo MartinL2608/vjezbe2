@@ -1,22 +1,33 @@
 @import "tailwindcss";
 
 @theme {
-    --color-brand: oklch(55% 0.18 265);
-    --radius-card: 0.75rem;
-}
-@utility card{
-    @apply rounded-card bg-white p-6 shadow-sm transition duration-300 dark:bg-slate-800;
-    &:hover{
-        @apply -translate-y-1 shadow-lg;
-    }
-}
-@utility btn-primary{
-    @apply focus-ring block rounded-sm bg-brand px-4 py-2 text-center font-semibold text-white;
-    &:hover{
-        @apply brightness-110;
-    }
+  --color-tank-svetlo: #6b7a3a;
+  --color-tank-tamno: #20251a;
+  --color-sand: #d6c7a1;
+  --font-display: "Arial", sans-serif;
 }
 
-@utility focus-ring {
-    @apply focus-visible:outline-hidden focus-visible:ring-4 focus-visible:ring-brand/50;
+@utility btn-primary {
+  display: inline-block;
+  border-radius: 0.5rem;
+  background-color: var(--color-tank-svetlo);
+  padding: 0.75rem 1.5rem;
+  font-weight: 700;
+  color: white;
+  transition: all 200ms ease;
+}
+
+@utility card {
+  border-radius: 0.75rem;
+  border: 1px solid #d1d5db;
+  background-color: white;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.08);
+  transition: all 200ms ease;
+}
+
+@utility vojni-naziv {
+  font-family: var(--font-display);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
